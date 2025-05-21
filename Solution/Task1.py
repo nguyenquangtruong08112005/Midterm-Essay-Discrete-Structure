@@ -1,15 +1,11 @@
 def Infix2Postfix(infix):
-    """
-    Convert a logical expression from infix to postfix (RPN) notation.
-    Input: infix string with variables A-Z and operators ~(NOT), &(AND), |(OR), >(IMPLIES), =(IFF).
-    Output: postfix string.
-    """
+
     # Define operator precedence (higher number = higher precedence)
     prec = {'~': 5, '&': 4, '|': 3, '>': 2, '=': 1}
     # '~' (NOT) is right-associative; all other operators are left-associative
     right_assoc = {'~'}
-    output = []         # list for output tokens
-    stack = []          # stack for operators
+    output = []        
+    stack = []         
     
     # Scan each character in the infix expression
     for token in infix:
